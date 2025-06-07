@@ -6,6 +6,7 @@
   "dependencies": {
     "eslint": "^8.49.0",
     "eslint-config-react-app": "^7.0.1",
+    "nanoid": "^5.1.5",
     "new-component": "5.0.2",
     "parcel": "2.15.2",
     "parcel-reporter-static-files-copy": "1.5.2",
