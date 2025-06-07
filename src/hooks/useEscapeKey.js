@@ -1,13 +1,15 @@
 import React from "react";
 const useEscapeKey = (callback) => {
-  React.useEffect(() => {
-    const handleKeyDown = (e) => {
+  const handleKeyDown = React.useCallback(
+    (e) => {
       console.log("key pressed?");
       if (e.code === "Escape") {
         callback();
       }
-    };
-
+    },
+    [callback]
+  );
+  React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
 
     return () => document.removeEventListener("keydown", handleKeyDown);
